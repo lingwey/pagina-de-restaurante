@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>restaurante</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <img class="bg" src="imagenes/bg.png" alt="">
+        <div class="menu container">
+            <a href="#" class="logo">restaurante</a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="imagenes/menu.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navBar">
+                <ul>
+                    <li><a href="#">inicio</a></li>
+                    <li><a href="#">servicio</a></li>
+                    <li><a href="#">contactos</a></li>
+                </ul>
+            </nav>
+            <div>
+                <ul>
+                    <li class="submenu">
+                        <img src="imagenes/car.svg" id="img-carrito" alt="carrito">
+                        <div id="carrito">
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>imagen</th>
+                                        <th>nombre</th>
+                                        <th>precio</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="btn-3">vaciar carrito</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header-content container">
+            <div class="header-txt">
+                <h1><span>bienvenido </span> disfruta de nuestros platos</h1>
+                <p>
+                    Nos complace darle la bienvenida a nuestro sitio web, donde encontrará información detallada sobre nuestra oferta gastronómica, nuestras instalaciones y nuestro equipo de profesionales. 
+                    Somos un restaurante comprometido en ofrecer una experiencia culinaria única y memorable, con platos elaborados con ingredientes frescos y de alta calidad, preparados por nuestro equipo de chefs experimentados. Además, nuestra amplia variedad de bebidas y cócteles le asegura una experiencia completa para el paladar. En nuestro restaurante, usted será atendido por nuestro amable y profesional equipo, que se esfuerza por brindar un servicio excepcional en todo momento. Esperamos que disfrute explorando nuestro sitio web y descubriendo todo lo que tenemos para ofrecer.
+                    ¡Gracias por visitarnos y esperamos tenerlo/a pronto en nuestro restaurante!
+                </p>
+                <a href="#" class="btn-1">información</a>
+            </div>
+            <div class="header-img">
+                <img src="imagenes/pl-1.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <section class="desayunos container"  >
+        <h2>Desayunos</h2>
+        <p>
+            horadio de 8am - 12pm
+        </p>
+
+        <div class="desayunos-content">
+            <div class="desayunos-1">
+                <img src="imagenes/b1.png" alt="">
+                <h3>platillo 1</h3>
+            </div>
+
+            <div class="desayunos-1">
+                <img src="imagenes/b2.png" alt="">
+                <h3>platillo 2</h3>
+            </div>
+
+            <div class="desayunos-1">
+                <img src="imagenes/b3.png" alt="">
+                <h3>platillo 3</h3>
+            </div>
+
+            <div class="desayunos-1">
+                <img src="imagenes/b4.png" alt="">
+                <h3>platillo 4</h3>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="info">
+        <img src="imagenes/bg-2.png" class="bg-2" alt="">
+        <div class="info-content container">
+            <div class="info-img">
+                <img src="imagenes/breakfast.png" alt="">
+            </div>
+
+            <div class="info-txt">
+                <h2>la mejor calidad de productos</h2>
+                <p>
+                    En nuestra tienda en línea, nos enorgullece ofrecer productos de la más alta calidad a nuestros clientes.
+                    Nos aseguramos de seleccionar cuidadosamente cada uno de nuestros proveedores para garantizar que nuestros productos sean elaborados con los mejores materiales y siguiendo los más altos estándares de calidad. 
+                    Además, nuestros productos son sometidos a rigurosos controles de calidad para asegurar que cumplen con nuestras expectativas y con las de nuestros clientes. Sabemos que nuestros clientes buscan productos duraderos y confiables, y es por eso que nos esforzamos por ofrecer solo lo mejor. 
+                    Cuando compra en nuestra tienda, puede estar seguro/a de que está adquiriendo productos de la mejor calidad y durabilidad, lo que significa que tendrá una experiencia de compra satisfactoria y podrá disfrutar de sus productos por mucho tiempo.
+                </p>
+                <a href="#" class="btn-1">Informacion</a>
+            </div>
+
+        </div> 
+    </section>
+
+
+    <main class="productos container">
+        <h2>menu</h2>
+
+        <div class="caja-container" id="lista-1">
+            <div class="caja">
+                <img src="imagenes/pla1.png" alt="">
+                <div class="producto-txt">
+                    <h3>Elisyum</h3>
+                    <p>
+                        calidad premium
+                    </p>
+                    <p class="precio">
+                        $800
+                    </p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="1">agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="caja">
+                <img src="imagenes/pla1.png" alt="">
+                <div class="producto-txt">
+                    <h3>Elisyum</h3>
+                    <p>
+                        calidad premium
+                    </p>
+                    <p class="precio">
+                        $800
+                    </p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="1">agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="caja">
+                <img src="imagenes/pla2.png" alt="">
+                <div class="producto-txt">
+                    <h3>Elisyum</h3>
+                    <p>
+                        calidad premium
+                    </p>
+                    <p class="precio">
+                        $800
+                    </p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="2">agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="caja">
+                <img src="imagenes/pla3.png" alt="">
+                <div class="producto-txt">
+                    <h3>Elisyum</h3>
+                    <p>
+                        calidad premium
+                    </p>
+                    <p class="precio">
+                        $800
+                    </p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="3">agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="caja">
+                <img src="imagenes/pla4.png" alt="">
+                <div class="producto-txt">
+                    <h3>Elisyum</h3>
+                    <p>
+                        calidad premium
+                    </p>
+                    <p class="precio">
+                        $800
+                    </p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="4">agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="caja">
+                <img src="imagenes/pla1.png" alt="">
+                <div class="producto-txt">
+                    <h3>Elisyum</h3>
+                    <p>
+                        calidad premium
+                    </p>
+                    <p class="precio">
+                        $800
+                    </p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="5">agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="caja">
+                <img src="imagenes/pla2.png" alt="">
+                <div class="producto-txt">
+                    <h3>Elisyum</h3>
+                    <p>
+                        calidad premium
+                    </p>
+                    <p class="precio">
+                        $800
+                    </p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="6">agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="caja">
+                <img src="imagenes/pla3.png" alt="">
+                <div class="producto-txt">
+                    <h3>Elisyum</h3>
+                    <p>
+                        calidad premium
+                    </p>
+                    <p class="precio">
+                        $800
+                    </p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="7">agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="caja">
+                <img src="imagenes/pla4.png" alt="">
+                <div class="producto-txt">
+                    <h3>Elisyum</h3>
+                    <p>
+                        calidad premium
+                    </p>
+                    <p class="precio">
+                        $800
+                    </p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="8">agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="caja">
+                <img src="imagenes/pla4.png" alt="">
+                <div class="producto-txt">
+                    <h3>Elisyum</h3>
+                    <p>
+                        calidad premium
+                    </p>
+                    <p class="precio">
+                        $800
+                    </p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="8">agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="caja">
+                <img src="imagenes/pla4.png" alt="">
+                <div class="producto-txt">
+                    <h3>Elisyum</h3>
+                    <p>
+                        calidad premium
+                    </p>
+                    <p class="precio">
+                        $800
+                    </p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="8">agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="caja">
+                <img src="imagenes/pla4.png" alt="">
+                <div class="producto-txt">
+                    <h3>Elisyum</h3>
+                    <p>
+                        calidad premium
+                    </p>
+                    <p class="precio">
+                        $800
+                    </p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="8">agregar al carrito</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="btn-2" id="mostrarMas">
+            Mostrar mas
+        </div>
+        <div class="btn-2" id="mostrarMenos">
+            Mostrar menos
+        </div>
+    </main>
+
+    <section class="app container">
+        <div class="app-txt">
+            <h2>Descarga nuestra app y descubre nuestras ofertas</h2>
+            <p>
+                ¡No pierda la oportunidad de ahorrar dinero en sus compras! Con nuestra aplicación, encontrará descuentos exclusivos y promociones especiales en una amplia variedad de productos y servicios. 
+                Ya sea que esté buscando ropa, comida, tecnología o cualquier otra cosa, nuestra aplicación le ayudará a encontrar los mejores precios y ofertas en su área. 
+                Además, nuestra app también le enviará notificaciones de descuentos personalizados en función de sus intereses y comportamientos de compra. Ahorre dinero de manera fácil y conveniente con nuestra aplicación.
+                 ¡Descárguela ahora y comience a disfrutar de los descuentos exclusivos!
+            </p>
+            <div class="descargas"> 
+                <img src="imagenes/store1.png" alt="">
+                <img src="imagenes/store2.png" alt="">
+            </div>
+        </div>
+        <div class="app-img">
+            <img src="imagenes/app.png" alt="">
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h3>nuestras redes</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Whatsapp</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="link">
+            <h3>Descarga nuestra app</h3>
+            <div class="descargas"> 
+                <img src="imagenes/store1.png" alt="">
+                <img src="imagenes/store2.png" alt="">
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,523 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    min-height: 70vh;
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo{
+    font-size: 25px;
+    color: orange;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.menu .navBar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navBar ul li a{
+    font-size: 15px;
+    padding: 20px;
+    font-weight: 600;
+    color: black;
+    display: block;
+}
+
+.menu .navBar ul li a:hover{
+    color: rgb(158, 104, 3);
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito {
+    display: none;
+}
+
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(10px);
+    top: 100%;
+    z-index: 1;
+    background-color: grey;
+    padding: 20px;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0,  0.2);
+}
+
+table{
+    width: 100%;
+}
+
+th, td {
+    color: white;
+}
+
+.borrar {
+    background-color: orangered;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+}
+
+.bg {
+    position: absolute;
+    width: 700px;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.header-txt{
+    width: 50%;
+    margin: 50px;
+}
+
+.header-txt h1 {
+    font-size: 55px;
+    line-height: 65px;
+    color: black;
+    margin-bottom: 35px;
+}
+
+.header-txt p {
+    font-size: 15px;
+    color: gray;
+    margin-bottom: 45px;
+}
+
+.header-txt span{
+    color: orange;
+}
+
+.btn-1{
+    display: inline-block;
+    padding: 12px 45px;
+    border-radius: 25px;
+    background-color: orangered;
+    color: white;
+    text-transform: capitalize;
+    box-shadow: 0 0 20px rgba(0, 0, 0,  0.2);
+}
+
+.btn-1:hover{
+    background-color: orange;
+}
+
+.header-img {
+    width: 50%;
+    text-align: right;
+}
+
+.header-img img {
+    width: 550px;
+}
+
+.desayunos {
+    padding: 50px 0;
+}
+
+h2{
+    font-size: 50px;
+    line-height: 55px;
+    color: black;
+    margin-bottom: 15px;
+}
+
+p{
+    font-size: 15px;
+    color: gray;
+    margin-bottom: 45px;
+}
+
+.desayunos-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.desayunos-1{
+    display: flex;
+    align-items: center;
+    background-color: orange;
+    padding: 10px;
+    border-radius: 15px;
+    width: 200px;
+    box-shadow: 0 0 20 rgba(0, 0, 0,  0.2);
+}
+
+.desayunos-1 h3 {
+    font-size: 15px;
+    color: white;
+    font-size: 600;
+}
+
+.desayunos-1 img {
+    width: 50px;
+    margin-right: 25;
+}
+
+.info {
+    padding: 100px 0;
+    position: relative;
+}
+
+.bg-2{
+    position: absolute;
+    width: 300px;
+    top: 50px;
+    z-index: -1;
+}
+
+.info-content {
+    display: flex;
+    align-items: center;
+}
+
+.info-img {
+    width: 50%;
+    text-align: left;
+}
+
+.info-img img{
+    width: 450px;
+    margin-left: -50px;
+}
+
+.info-txt {
+    width: 50%;
+}
+
+.productos{
+    padding: 0 0 50px 0;
+    text-align: center;
+}
+
+.caja-container{
+    margin-top: 55px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+}
+
+.caja{
+    border-top: 2px solid orange;
+    padding: 20px;
+    border-radius: 15px;
+    z-index: 1000;
+    box-shadow: 0 5px 10px rgba(0, 0, 0,  0.2);
+    display: none;
+}
+
+.caja:nth-child(1),
+.caja:nth-child(2),
+.caja:nth-child(3),
+.caja:nth-child(4) {
+    display: inline-block;
+}
+
+.caja img {
+    width: 120px;
+}
+
+.producto-txt h3{
+    font-size: 20px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.producto-txt p {
+    margin-bottom: 25px;
+}
+
+.precio{
+    font-size: 15px;
+    color: orange;
+}
+
+.btn-2 {
+    background-color: orange;
+    margin-top: 50px;
+    display: inline-block;
+    padding: 15px 35px;
+    border-radius: 25px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0,  0.2);
+}
+
+.btn-2:hover{
+    background-color: orangered;
+}
+
+#mostrarMenos{
+    display: none;
+}
+
+.btn-3{
+    display: inline-block;
+    padding: 5px 25px;
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+}
+
+.btn-3:hover{
+    background-color: orangered;
+}
+
+.app{
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+}
+
+.app-txt{
+    width: 50%;
+}
+
+.descargas {
+    display: flex;
+}
+
+.descargas img {
+    width: 150px;
+}
+
+.app-img {
+    width: 50%;
+    text-align: center;
+}
+
+.app-img img{
+    width: 450px;
+}
+
+.footer{
+    padding: 50px 0;
+    background-color: orange;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+}
+.link h3{
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.link a{
+    color: white;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 991px){
+    .menu{
+        padding: 20px;
+    }
+
+    .menu label{
+        display: initial;
+    }
+
+    .menu .navBar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: orange;
+        display: none;
+    }
+
+    .menu .navBar ul li {
+        width: 100%;
+    }
+
+    .menu .navBar ul li a:hover{
+        color: white;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    #menu:checked ~ .navBar {
+        display: initial;
+    }
+
+    .submenu:hover #carrito {
+        width: 100%;
+    }
+
+    .bg {
+        display: none;
+    }
+
+    .header-content{
+        padding: 100px 30px 30px 30px;
+        flex-direction: column;
+    }
+
+    .header-txt {
+        text-align: center;
+        width: 100%;
+        margin: 0 0 25px 0;
+    }
+
+    .header-txt h1 {
+        font-size: 45px;
+        line-height: 55px;
+        margin-bottom: 20px;
+    }
+
+    .header-txt p {
+        margin-bottom: 20px;
+    }
+
+    .header-img {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-img img {
+        width: 300px;
+    }
+
+    .desayunos{
+        padding: 30px;
+    }
+
+    .desayunos-content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .desayunos-1 {
+        justify-content: space-between;
+        padding: 10px 55px ;
+        margin-bottom: 25px;
+    }
+
+    .info {
+        padding: 30px;
+    }
+    
+    .bg-2{
+        display: none;
+    }
+
+    .info-content {
+        flex-direction: column;
+    }
+
+    .info-img{
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-img img {
+        width: 250px;
+        margin-left: 0;
+    }
+
+    .info-txt {
+        width: 100%;
+        text-align: center;
+    }
+
+    .productos{
+        padding: 25px;
+    }
+
+    .caja-container {
+        margin-top: 25px;
+    }
+
+    .app {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .app-txt{
+        width: 100%;
+        text-align: center;
+    }
+
+    .descargas{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .app-img{
+        width: 100%;
+        text-align: center;
+    }
+
+    .app-img img {
+        width: 300px;
+    }
+
+    .footer {
+        padding: 30px;
+    }
+
+    .footer-content{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+}
