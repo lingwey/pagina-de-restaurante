@@ -363,6 +363,61 @@ p{
     display: block;
     margin-bottom: 20px;
 }
+/* swiper*/
+
+.swiper{
+    width: 80%;
+    height: 80%;  
+}
+
+.swiper-slide{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.swiper-button-prev::after{
+    font-size: 30px;
+
+}
+
+.swiper-button-next::after{
+    font-size: 30px;
+}
+
+.swiper-button-prev{
+    color:red;
+}
+
+.swiper-button-next{
+    color: red;
+}
+
+.swiper-pagination-bullet{
+    background-color: red;
+    opacity: 1;
+    top: 50px;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: white;
+}
+
+
+.oferta h3{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.descripcionProducto{
+    font-size: 15px;
+    margin-top: 15px ;
+}
+
+.oferta img{
+    width: 150px;
+}
+
+
 
 @media (max-width: 991px){
     .menu{

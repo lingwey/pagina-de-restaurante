@@ -39,14 +39,16 @@ function ocultarCajas() {
 //carrito
 
 var carrito = document.getElementById('carrito');
-const elementos = document.getElementById('lista-1');
+const elementos1 = document.getElementById('lista-1');
+const elementos2 = document.getElementById('lista-2');
 const lista = document.querySelector('#lista-carrito tbody');
 const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
 
 cargarEventos ();
 
 function cargarEventos (){
-    elementos.addEventListener('click', comprarElemento);
+    elementos1.addEventListener('click', comprarElemento);
+    elementos2.addEventListener('click', comprarElemento)
     carrito.addEventListener('click', eliminarElemento);
     vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
 }
@@ -116,3 +118,29 @@ function vaciarCarrito (){
     return false
 }
 
+//control del swiper
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination : {
+        el:".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        0:{
+            slidesPerView: 1,
+        },
+        520:{
+            slidesPerView: 1,
+        },
+        950:{
+            slidesPerView: 2,
+        },
+    } 
+});

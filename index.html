@@ -7,6 +7,7 @@
     <title>restaurante</title>
     <link rel="stylesheet" href="estilos.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 </head>
 <body>
     <header class="header">
@@ -297,6 +298,84 @@
         </div>
     </main>
 
+    <section class="anuncio-ofertas container">
+        <div >
+            <h3>productos en oferta</h3>
+            <hr>
+            <p>descripcion del producto</p>
+        </div>
+    </section>
+
+    
+    <section class="mostrarProductos container" id="lista-2">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="oferta">
+                        <h3 >algo</h3>
+                        <p class="precio">$1500</p>
+                        <img src="imagenes/pla4.png" alt="">
+                        <p class="descripcionProducto">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus animi, 
+                            fugit sit enim eaque itaque in delectus iusto, necessitatibus minima reiciendis.
+                             Quae error sit expedita inventore, a aut corrupti dolorum?
+                        </p>
+                        <a href="#" class="agregar-carrito btn-2" data-id="9">meter al carrito</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="oferta">
+                        <h3>algo</h3>
+                        <p class="precio">$2500</p>
+                        <img src="imagenes/pla4.png" alt="">
+                        <p class="descripcionProducto">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus animi, 
+                            fugit sit enim eaque itaque in delectus iusto, necessitatibus minima reiciendis.
+                             Quae error sit expedita inventore, a aut corrupti dolorum?
+                        </p>
+                        <a href="#" class="agregar-carrito btn-2" data-id="10">meter al carrito</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="oferta">
+                        <h3>algo</h3>
+                        <p class="precio">$3500</p>
+                        <img src="imagenes/pla4.png" alt="">
+                        <p class="descripcionProducto">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus animi, 
+                            fugit sit enim eaque itaque in delectus iusto, necessitatibus minima reiciendis.
+                             Quae error sit expedita inventore, a aut corrupti dolorum?
+                        </p>
+                        <a href="#" class="agregar-carrito btn-2" data-id="11">meter al carrito</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="oferta">
+                        <h3>algo</h3>
+                        <p class="precio">$4500</p>
+                        <img src="imagenes/pla4.png" alt="">
+                        <p class="descripcionProducto">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus animi, 
+                            fugit sit enim eaque itaque in delectus iusto, necessitatibus minima reiciendis.
+                             Quae error sit expedita inventore, a aut corrupti dolorum?
+                        </p>
+                        <a href="#" class="agregar-carrito btn-2" data-id="12">meter al carrito</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-button-next "></div>
+            <div class="swiper-button-prev "></div>
+            <div class="swiper-pagination"></div>
+
+        </div>
+    </section>
+
     <section class="app container">
         <div class="app-txt">
             <h2>Descarga nuestra app y descubre nuestras ofertas</h2>
@@ -316,7 +395,7 @@
         </div>
 
     </section>
-
+ 
     <footer class="footer">
         <div class="footer-content container">
             <div class="link">
@@ -337,7 +416,7 @@
             </div>
         </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
