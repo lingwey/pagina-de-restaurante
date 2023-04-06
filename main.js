@@ -1,4 +1,19 @@
-//var cargarMasBtn = document.getElementById("cargar-mas");
+var imgCarruselResto = ["muestraDePlatillos", "servicio", "cocina", "restoPorDentro", "restoPorFuera"];
+var imagen = -1;
+window.onload= carrusel;
+function carrusel(){
+    cambiarImagCarrusel()
+}
+
+function cambiarImagCarrusel (){
+    document.querySelector("#carrusel").innerHTML = `<img src = "imgRestaurantes/${imgCarruselResto[imagen]}.jpg"`;
+}
+
+
+
+
+
+
 let currentItem = 4;
 $("#mostrarMas").click( () => {
     let cajas = [...document.querySelectorAll('.caja-container .caja')];
@@ -28,7 +43,7 @@ function ocultarCajas() {
             currentItem = 4;
             $("#mostrarMenos").hide();
             $("#mostrarMas").show();
-            return
+            break
         }
     }
     
@@ -120,8 +135,8 @@ function vaciarCarrito (){
 
 //control del swiper
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 2,
-    spaceBetween: 30,
+    slidesPerView: 1,
+    spaceBetween: 10,
     loop: true,
     loopFillGroupWithBlank: true,
     pagination : {
