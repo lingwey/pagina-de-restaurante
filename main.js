@@ -1,12 +1,44 @@
 var imgCarruselResto = ["muestraDePlatillos", "servicio", "cocina", "restoPorDentro", "restoPorFuera"];
 var imagen = -1;
+var tempo;
 window.onload= carrusel;
 function carrusel(){
+    for (let i = 0; i < imgCarruselResto.length; i++){
+        document.querySelector("#bolitas").insertAdjacentHTML('beforeend', `<div class = "bolitas" seudo = "${i}"></div>`)
+        document.querySelectorAll(".bolitas")[i].onclick = imagenSeleccion;
+    }
     cambiarImagCarrusel()
+    tempo = setInterval(cambiarImagCarrusel,2500);
+    
 }
 
 function cambiarImagCarrusel (){
-    document.querySelector("#carrusel").innerHTML = `<img src = "imgRestaurantes/${imgCarruselResto[imagen]}.jpg"`;
+    imagen++
+    if (imagen >= imgCarruselResto.length){
+        imagen = 0;
+    }
+   actualizarImagen()
+    pintar()
+}
+
+function actualizarImagen (){
+    document.querySelector("#carrusel").innerHTML = `<img src = "imgRestaurantes/${imgCarruselResto[imagen]}.jpg">`;
+}
+
+function pintar(){
+    for (let i = 0; i < imgCarruselResto.length; i++){
+        document.querySelectorAll(".bolitas")[i].style.backgroundColor = null;
+    }
+
+    document.querySelectorAll(".bolitas")[imagen].style.backgroundColor = "orangered"
+}
+
+function imagenSeleccion (){
+    clearInterval(tempo);
+    imagen = this.getAttribute("seudo");
+    pintar();
+    actualizarImagen();
+    tempo = setInterval(cambiarImagCarrusel,2500);
 }
 
 

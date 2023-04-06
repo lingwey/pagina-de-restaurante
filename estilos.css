@@ -177,17 +177,25 @@ p{
 }
 
 #carrusel img{
+    margin-top: 10%;
     width: 100%;
     vertical-align: top;
+    height: 450px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 #bolitas{
     display: flex;
     justify-content: center;
-    background-color: blue;
+    background-color: orange;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0,  0.2);
 }
 
 .bolitas{
+    border-color: 2px solid black;
     width: 13px;
     height: 13px;
     border-radius: 50%;
