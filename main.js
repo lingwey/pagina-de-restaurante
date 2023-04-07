@@ -88,6 +88,7 @@ function ocultarCajas() {
 var carrito = document.getElementById('carrito');
 const elementos1 = document.getElementById('lista-1');
 const elementos2 = document.getElementById('lista-2');
+const elementos3 = document.getElementById('lista-3');
 const lista = document.querySelector('#lista-carrito tbody');
 const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
 
@@ -95,7 +96,8 @@ cargarEventos ();
 
 function cargarEventos (){
     elementos1.addEventListener('click', comprarElemento);
-    elementos2.addEventListener('click', comprarElemento)
+    elementos2.addEventListener('click', comprarElemento);
+    elementos3.addEventListener('click', comprarElemento);
     carrito.addEventListener('click', eliminarElemento);
     vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
 }
@@ -173,7 +175,7 @@ var swiper = new Swiper(".mySwiper", {
     loopFillGroupWithBlank: true,
     pagination : {
         el:".swiper-pagination",
-        clickable: true,
+        //clickable: true,
     },
     navigation: {
         nextEl: ".swiper-button-next",
