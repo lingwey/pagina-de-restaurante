@@ -341,18 +341,29 @@ p{
 }
 
 .swiper{
-    width: 80%;
-    height: 80%;  
+    width: 100%;
+    height: 100%;  
 }
 
 .swiper-slide{
-    text-align: center;
-    padding-bottom: 30px;
+    padding: 0 80px 50px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1000px;
 }
-.swiper-button-next{
+
+.swiper-button-next::after{
     color: orange;
 }
 
+.swiper-button-prev::after{
+    color: orange;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: orange;
+}
 
 .oferta h3{
     font-size: 15px;
@@ -361,11 +372,11 @@ p{
 
 .descripcionProducto{
     font-size: 15px;
-    margin-top: 40px ;
+    margin-top: 30px ;
 }
 
 .oferta img{
-    width: 170px;
+    width: 60%;
     height: 100px;
 }
 

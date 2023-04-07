@@ -1,3 +1,4 @@
+
 var imgCarruselResto = ["muestraDePlatillos", "servicio", "cocina", "restoPorDentro", "restoPorFuera"];
 var imagen = -1;
 var tempo;
@@ -30,7 +31,7 @@ function pintar(){
         document.querySelectorAll(".bolitas")[i].style.backgroundColor = null;
     }
 
-    document.querySelectorAll(".bolitas")[imagen].style.backgroundColor = "orangered"
+    document.querySelectorAll(".bolitas")[imagen].style.backgroundColor = "#007aff"
 }
 
 function imagenSeleccion (){
@@ -168,14 +169,14 @@ function vaciarCarrito (){
 }
 
 //control del swiper
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 10,
+var swiper = new Swiper(".mySwiper-1", {
+    slidesPerView: 3,
+    spaceBetween: 30,
     loop: true,
     loopFillGroupWithBlank: true,
     pagination : {
         el:".swiper-pagination",
-        //clickable: true,
+        clickable: true,
     },
     navigation: {
         nextEl: ".swiper-button-next",
@@ -193,3 +194,31 @@ var swiper = new Swiper(".mySwiper", {
         },
     } 
 });
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination : {
+        el:".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        0:{
+            slidesPerView: 1,
+        },
+        520:{
+            slidesPerView: 1,
+        },
+        950:{
+            slidesPerView: 2,
+        },
+    } 
+});
+
+
