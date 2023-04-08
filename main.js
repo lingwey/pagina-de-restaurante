@@ -45,53 +45,15 @@ function imagenSeleccion (){
 
 
 
-
-
-let currentItem = 4;
-$("#mostrarMas").click( () => {
-    let cajas = [...document.querySelectorAll('.caja-container .caja')];
-    console.log(cajas.length)
-    for (let i = currentItem; i< currentItem + 4; i++){
-        cajas[i].style.display ='inline-block';
-    }
-    currentItem += 4;
-    if(currentItem >= cajas.length){
-        //cargarMasBtn.style.display='none';
-        $("#mostrarMas").hide();
-        $("#mostrarMenos").show();
-    }
-})
-
-$("#mostrarMenos").click(() => {
-   ocultarCajas()
-})
-
-function ocultarCajas() {
-    let cajas = [...document.querySelectorAll('.caja-container .caja')];
-    for (let i = 0; i < cajas.length; i++) {
-        if (i < currentItem) {
-            cajas[i].style.display = 'none';
-        }
-        if (i == 4){
-            currentItem = 4;
-            $("#mostrarMenos").hide();
-            $("#mostrarMas").show();
-            break
-        }
-    }
-    
-   
-}
-
-
 //carrito
 
 var carrito = document.getElementById('carrito');
-const elementos1 = document.getElementById('lista-1');
-const elementos2 = document.getElementById('lista-2');
-const elementos3 = document.getElementById('lista-3');
-const lista = document.querySelector('#lista-carrito tbody');
-const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
+var elementos1 = document.getElementById('lista-1');
+var elementos2 = document.getElementById('lista-2');
+var elementos3 = document.getElementById('lista-3');
+var lista = document.querySelector('#lista-carrito tbody');
+var vaciarCarritoBtn = document.getElementById('vaciar-carrito');
+var costoTotal = $("#total");
 
 cargarEventos ();
 
@@ -120,6 +82,14 @@ function leerDatosElemento(elemento){
         id: elemento.querySelector('a').getAttribute("data-id")
     }
     subirCarrito(infoElemento);
+    precioFinal(infoElemento.precio);
+
+}
+
+function precioFinal (precio){
+    arrayPrecios = [];
+    arrayPrecios.push(precio);
+    console.log(arrayPrecios);
 }
 
 function subirCarrito(elemento){
