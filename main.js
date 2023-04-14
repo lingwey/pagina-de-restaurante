@@ -202,4 +202,5 @@ $("#finalizarPedido").click(function () {
         $(".esconder").show();
     },5000);
     
+    vaciarCarrito();
 })
