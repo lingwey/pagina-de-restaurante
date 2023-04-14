@@ -148,32 +148,6 @@ function vaciarCarrito (){
 }
 
 //control del swiper
-var swiper = new Swiper(".mySwiper-1", {
-    slidesPerView: 2,
-    spaceBetween: 30,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    pagination : {
-        el:".swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-        0:{
-            slidesPerView: 1,
-        },
-        520:{
-            slidesPerView: 1,
-        },
-        950:{
-            slidesPerView: 2,
-        },
-    } 
-});
-
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 2,
     spaceBetween: 30,
@@ -200,4 +174,32 @@ var swiper = new Swiper(".mySwiper", {
     } 
 });
 
+//formulario
+window.onload = esconderFormulario;
 
+function esconderFormulario (){
+    $("#formulario").hide();
+    $("#pedidoListo").hide();
+}
+
+$("#pagar").click(function (){
+    if (lista.children.length >= 1){
+        $(".esconder").hide();
+        $("#formulario").show();
+        $('html, body').animate({
+            scrollTop: $("#formulario").offset().top
+        }, 500);
+    }
+})
+
+$("#finalizarPedido").click(function () {
+    $("#formulario").hide();
+    $("#pedidoListo").show();
+    setTimeout(function(){
+     $("#pedidoListo").hide();
+    }, 5000);
+    setTimeout(function(){
+        $(".esconder").show();
+    },5000);
+    
+})
