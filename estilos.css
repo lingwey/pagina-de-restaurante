@@ -6,6 +6,39 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none !important;
+}
+#formPedido{
+    background-color: orange;
+    border-radius: 25px;
+    z-index: 1000;
+    box-shadow: 0 5px 10px rgba(0, 0, 0,  0.2)
+}
+
+#icoListo{
+    background-color: orange;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+#ico{
+    padding: auto;
+}
+
+i.bi-bag-check-fill {
+    font-size: 500%;
+}
+#ulContactos, #ulServicios{
+    background-color: orange;
+    
+}
+.dropdown-item:hover{
+    background-color: orangered !important;
+    color: white !important;
+}
+
+
 .container{
     max-width: 1200px;
     margin: 0 auto;
@@ -358,10 +391,12 @@ p{
 
 .swiper-button-next::after{
     color: orange;
+    --swiper-navigation-size: 25px;
 }
 
 .swiper-button-prev::after{
     color: orange;
+    --swiper-navigation-size: 25px;
 }
 
 .swiper-pagination-bullet-active{

@@ -1,4 +1,5 @@
 
+//manejo de carrusel de imagenes
 var imgCarruselResto = ["muestraDePlatillos", "servicio", "cocina", "restoPorDentro", "restoPorFuera"];
 var imagen = -1;
 var tempo;
@@ -53,7 +54,8 @@ var elementos2 = document.getElementById('lista-2');
 var elementos3 = document.getElementById('lista-3');
 var lista = document.querySelector('#lista-carrito tbody');
 var vaciarCarritoBtn = document.getElementById('vaciar-carrito');
-var costoTotal = $("#total");
+var carritoCostoTotal = $('#total');
+carritoCostoTotal.text("$0.00")
 
 cargarEventos ();
 
@@ -82,15 +84,8 @@ function leerDatosElemento(elemento){
         id: elemento.querySelector('a').getAttribute("data-id")
     }
     subirCarrito(infoElemento);
-    precioFinal(infoElemento.precio);
-
 }
 
-function precioFinal (precio){
-    arrayPrecios = [];
-    arrayPrecios.push(precio);
-    console.log(arrayPrecios);
-}
 
 function subirCarrito(elemento){
     const filaCarrito = document.createElement('tr');
@@ -103,7 +98,7 @@ function subirCarrito(elemento){
             ${elemento.titulo}
         </td>
 
-        <td>
+        <td class = "precio">
             ${elemento.precio}
         </td>
 
@@ -113,9 +108,21 @@ function subirCarrito(elemento){
             </a>
         </td>
     `;
-
+   
+    
     lista.appendChild(filaCarrito);
+    actulizarCostoTotal();
+}
 
+function actulizarCostoTotal(){
+    let costoTotalActual = 0;
+    const elementosCarrito = document.querySelectorAll("#lista-carrito tbody tr");
+    elementosCarrito.forEach(function(elementoCarrito){
+        const precio = parseFloat(elementoCarrito.querySelector(".precio").textContent.replace("$", ""));
+        costoTotalActual += precio;
+    });
+    carritoCostoTotal.text ("$" + costoTotalActual.toFixed(2));
+    console.log(costoTotalActual)
 }
 
 function eliminarElemento(e){
@@ -129,44 +136,20 @@ function eliminarElemento(e){
         elementoID = elemento.querySelector("a").getAttribute("data-id");
 
     }
+    actulizarCostoTotal();
 }
 
 function vaciarCarrito (){
     while (lista.firstChild){
         lista.removeChild(lista.firstChild);
     }
+    carritoCostoTotal.text("$0.00")
     return false
 }
 
 //control del swiper
-var swiper = new Swiper(".mySwiper-1", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    pagination : {
-        el:".swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-        0:{
-            slidesPerView: 1,
-        },
-        520:{
-            slidesPerView: 1,
-        },
-        950:{
-            slidesPerView: 2,
-        },
-    } 
-});
-
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
+    slidesPerView: 2,
     spaceBetween: 30,
     loop: true,
     loopFillGroupWithBlank: true,
@@ -191,4 +174,33 @@ var swiper = new Swiper(".mySwiper", {
     } 
 });
 
+//formulario
+window.onload = esconderFormulario;
 
+function esconderFormulario (){
+    $("#formulario").hide();
+    $("#pedidoListo").hide();
+}
+
+$("#pagar").click(function (){
+    if (lista.children.length >= 1){
+        $(".esconder").hide();
+        $("#formulario").show();
+        $('html, body').animate({
+            scrollTop: $("#formulario").offset().top
+        }, 500);
+    }
+})
+
+$("#finalizarPedido").click(function () {
+    $("#formulario").hide();
+    $("#pedidoListo").show();
+    setTimeout(function(){
+     $("#pedidoListo").hide();
+    }, 5000);
+    setTimeout(function(){
+        $(".esconder").show();
+    },5000);
+    
+    vaciarCarrito();
+})
