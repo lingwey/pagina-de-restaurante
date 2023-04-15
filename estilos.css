@@ -31,7 +31,7 @@
 
 .logo{
     font-size: 25px;
-    color: orange;
+    color: black;
     text-transform: uppercase;
     font-weight: 800;
 }
@@ -42,15 +42,15 @@
 }
 
 .menu .navBar ul li a{
-    font-size: 15px;
+    font-size: 20px;
     padding: 20px;
-    font-weight: 600;
+    font-weight: 800;
     color: black;
     display: block;
 }
 
 .menu .navBar ul li a:hover{
-    color: rgb(158, 104, 3);
+    color: orange
 }
 
 #menu {
