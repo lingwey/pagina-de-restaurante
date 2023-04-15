@@ -53,6 +53,7 @@ var elementos1 = document.getElementById('lista-1');
 var elementos2 = document.getElementById('lista-2');
 var elementos3 = document.getElementById('lista-3');
 var lista = document.querySelector('#lista-carrito tbody');
+var listaFormulario = document.querySelector('#carrito-formulario tbody');
 var vaciarCarritoBtn = document.getElementById('vaciar-carrito');
 var carritoCostoTotal = $('#total');
 carritoCostoTotal.text("$0.00")
@@ -111,6 +112,7 @@ function subirCarrito(elemento){
    
     
     lista.appendChild(filaCarrito);
+    listaFormulario.appendChild(filaCarrito);
     actulizarCostoTotal();
 }
 
