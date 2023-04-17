@@ -3,14 +3,16 @@
 var imgCarruselResto = ["muestraDePlatillos", "servicio", "cocina", "restoPorDentro", "restoPorFuera"];
 var imagen = -1;
 var tempo;
-window.onload= carrusel;
+window.addEventListener('load', carrusel)
 function carrusel(){
     for (let i = 0; i < imgCarruselResto.length; i++){
         document.querySelector("#bolitas").insertAdjacentHTML('beforeend', `<div class = "bolitas" seudo = "${i}"></div>`)
         document.querySelectorAll(".bolitas")[i].onclick = imagenSeleccion;
+        
     }
     cambiarImagCarrusel()
     tempo = setInterval(cambiarImagCarrusel,2500);
+
     
 }
 
@@ -19,8 +21,8 @@ function cambiarImagCarrusel (){
     if (imagen >= imgCarruselResto.length){
         imagen = 0;
     }
-   actualizarImagen()
-    pintar()
+   actualizarImagen();
+    pintar();
 }
 
 function actualizarImagen (){
@@ -32,7 +34,7 @@ function pintar(){
         document.querySelectorAll(".bolitas")[i].style.backgroundColor = null;
     }
 
-    document.querySelectorAll(".bolitas")[imagen].style.backgroundColor = "#007aff"
+    document.querySelectorAll(".bolitas")[imagen].style.backgroundColor = "#007aff";
 }
 
 function imagenSeleccion (){
@@ -175,8 +177,7 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 //formulario
-window.onload = esconderFormulario;
-
+window.addEventListener('load', esconderFormulario)
 function esconderFormulario (){
     $("#formulario").hide();
     $("#pedidoListo").hide();
